@@ -8,8 +8,9 @@
 
 
   var counter = 0;
-  var winner = false;
-  var loser = false;
+  $("#counter").text(counter);
+
+
   
 
   var numberOptions = [];
@@ -23,7 +24,6 @@
 
 
   
-
 
 
   // Next we create a for loop to create crystals for every numberOption.
@@ -61,35 +61,32 @@
     // Every click, from every crystal adds to the global counter.
     counter += crystalValue;
     $("#counter").text(counter);
-    
+  
+  
 
     // All of the same game win-lose logic applies. So the rest remains unchanged.
-    
+ 
 
-    if (counter === targetNumber) {
+
+      if (counter === targetNumber) {
       wins++;
       $("#wins").text(wins);
-      winner = true;
+      counter = 0;
+      $("#counter").text(counter);
+
+
+
     }
 
     else if (counter >= targetNumber) {
       losses++;
       $("#losses").text(losses);
-      loser = true;
-    }
-
-    else if (winner = true) {
       counter = 0;
-      winner = false;
-      
-    }
+      $("#counter").text(counter);
 
-    else if (loser = true) {
-      counter = 0;
-      loser = false;
-      
-    }
 
+    }
 
 
   });
+
