@@ -3,3 +3,48 @@
       height: 100px;
 
     }
+
+    body {
+    	background-color: black;
+    }
+
+    #myObject {
+	  background: black;
+	}
+
+	.title {
+		color: white;
+		background: orange;
+		padding: 20px 0px 20px 0px;
+
+	}
+
+	.instructions {
+		font-weight: bold;
+		background: #FEEED0;
+		color: green;
+		padding: 10px 5px 80px 5px;
+	}
+
+	.guess {
+		background: green;
+		padding: 25px 25px 42px 0px;
+	}
+
+	.winLoss {
+		font-size: 20px;
+		background: skyblue;
+		padding: 40px 25px 40px 15px;
+	}
+
+	.totalScoreIs {
+		background: teal;
+		color: white;
+
+	}
+
+	.totalScore {
+		background: teal;
+		color: white;
+		padding: 0 0 40px 0;
+	}

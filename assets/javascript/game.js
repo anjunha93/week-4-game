@@ -1,5 +1,5 @@
 
-  var targetNumber = Math.floor(Math.random() * 40 + 20);
+  var targetNumber = Math.floor(Math.random() * 109 +19);
   $("#number-to-guess").text(targetNumber);
   var wins = 0;
   var losses = 0;
@@ -11,6 +11,8 @@
   $("#counter").text(counter);
 
 
+  $("#myObject").css('background-image', 'url("https://www.planwallpaper.com/static/images/518164-backgrounds.jpg")');
+
   
 
   var numberOptions = [];
@@ -18,9 +20,10 @@
 
   
   for (var i = 0; i < 4; i++) {
-    numberOptions.push(Math.floor(Math.random() * 10 + 2));
+    numberOptions.push(Math.floor(Math.random() * 11 + 1));
   }
   
+
 
 
   
@@ -57,15 +60,10 @@
     
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
-    // We then add the crystalValue to the user's "counter" which is a global variable.
-    // Every click, from every crystal adds to the global counter.
+
     counter += crystalValue;
     $("#counter").text(counter);
   
-  
-
-    // All of the same game win-lose logic applies. So the rest remains unchanged.
- 
 
 
       if (counter === targetNumber) {
@@ -73,6 +71,8 @@
       $("#wins").text(wins);
       counter = 0;
       $("#counter").text(counter);
+      targetNumber = Math.floor(Math.random() * 109 +19);
+      $("#number-to-guess").text(targetNumber);
 
 
 
@@ -83,6 +83,8 @@
       $("#losses").text(losses);
       counter = 0;
       $("#counter").text(counter);
+      targetNumber = Math.floor(Math.random() * 109 +19);
+      $("#number-to-guess").text(targetNumber);
 
 
     }
